@@ -2,7 +2,7 @@
 
 /* 正方形のアニメーション実行時のクラス */
 .square.animate {
-    animation: scaleUp 1s ease-out;
+    animation: scaleUp 0.5s ease-out;
 }
 
 /* 基本のキーフレームアニメーション */
