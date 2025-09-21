@@ -1,0 +1,98 @@
+/* CSS Animation 課題編集用CSS */
+
+/* 正方形のアニメーション実行時のクラス */
+.square.animate {
+    animation: scaleUp 1s ease-out;
+}
+
+/* 基本のキーフレームアニメーション */
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ========== 演習課題用アニメーション ========== */
+
+/* 課題1: 速度変更の例 */
+/*
+.square.animate {
+    animation: scaleUp 0.5s ease-out;
+}
+*/
+/* 課題2: アニメーション種類変更の例 */
+/*
+.square.animate {
+    animation: scaleUp 1s ease-in-out;
+}
+*/
+
+/* 課題3: 色変化アニメーション */
+@keyframes colorChange {
+    0% {
+        background-color: #ff6b6b;
+    }
+    50% {
+        background-color: #4ecdc4;
+    }
+    100% {
+        background-color: #ff6b6b;
+    }
+}
+/*
+.square.animate {
+    animation:
+        scaleUp 1s ease-out,
+        colorChange 1s ease-out;
+}
+*/
+/* 課題4: 回転アニメーション */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.8);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+/*
+.square.animate {
+    animation: rotate 1s ease-out;
+}
+*/
+/* 課題5: 複数アニメーション組み合わせ */
+@keyframes complexAnimation {
+    0% {
+        transform: rotate(0deg) scale(1);
+        background-color: #ff6b6b;
+        border-radius: 10px;
+    }
+    25% {
+        transform: rotate(90deg) scale(1.5);
+        background-color: #4ecdc4;
+        border-radius: 50%;
+    }
+    75% {
+        transform: rotate(270deg) scale(1.8);
+        background-color: #45b7d1;
+        border-radius: 20px;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        background-color: #ff6b6b;
+        border-radius: 10px;
+    }
+}
+/*
+.square.animate {
+    animation: complexAnimation 2s ease-in-out;
+}*/

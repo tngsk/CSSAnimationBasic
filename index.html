@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Animation 教材</title>
+        <style>
+            /* 基本スタイル - 編集不要 */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Arial", sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                color: #333;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: center;
+            }
+
+            h1 {
+                color: white;
+                margin-bottom: 10px;
+                font-size: 2.5rem;
+            }
+
+            p {
+                color: white;
+                margin-bottom: 30px;
+                font-size: 1.1rem;
+            }
+
+            /* アニメーションエリア */
+            .animation-area {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 400px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+                backdrop-filter: blur(10px);
+                margin-bottom: 30px;
+            }
+
+            /* 正方形の基本スタイル */
+            .square {
+                width: 80px;
+                height: 80px;
+                background-color: #ff6b6b;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: transform 0.1s ease;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            /* ホバー効果 */
+            .square:hover {
+                transform: scale(1.05);
+            }
+
+            /* 指示書のスタイル */
+            .instructions {
+                background: rgba(255, 255, 255, 0.9);
+                padding: 30px;
+                border-radius: 15px;
+                text-align: left;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .instructions h2 {
+                margin-bottom: 20px;
+                color: #333;
+                font-size: 1.8rem;
+            }
+
+            .instructions ol {
+                padding-left: 20px;
+            }
+
+            .instructions li {
+                margin-bottom: 10px;
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
+
+            /* iPad最適化 */
+            @media (max-width: 1024px) {
+                .container {
+                    padding: 25px;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>CSS アニメーション</h1>
+            <p>正方形をタップしてアニメーションを確認しよう</p>
+
+            <div class="animation-area">
+                <div class="square" id="animatedSquare"></div>
+            </div>
+
+            <div class="instructions">
+                <h2>演習課題</h2>
+                <ol>
+                    <li>アニメーションの速度を変更してみよう（duration）</li>
+                    <li>
+                        アニメーションの種類を変更してみよう（timing-function）
+                    </li>
+                    <li>色を変化させるアニメーションを追加してみよう</li>
+                    <li>回転のアニメーションを追加してみよう</li>
+                    <li>複数のアニメーションを組み合わせてみよう</li>
+                </ol>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
